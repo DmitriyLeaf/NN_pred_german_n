@@ -15,10 +15,10 @@ def readFileRec(file_name, len_str):
 	training_data_file.close()
 
 	training_data_list = training_data_list[1:]
-	print(training_data_list[:10])
+	#print(training_data_list[:10])
 	np.random.shuffle(training_data_list)
 	training_data_list = training_data_list
-	print(training_data_list[:10])
+	#print(training_data_list[:10])
 
 	f_inputs = [[[0] for i in range(0, len_str)]]
 	targets = []
@@ -44,8 +44,8 @@ def readFileRec(file_name, len_str):
 	f_inputs = np.delete(f_inputs, 0, 0)
 	encoder = LabelEncoder()
 	encoder.fit(targets)
-	new_targets = encoder.transform(targets)
-	f_targets = new_targets
+	f_targets = encoder.transform(targets)
+	print("Done!")
 	return f_inputs, f_targets
 
 for lens in END_LEN:
