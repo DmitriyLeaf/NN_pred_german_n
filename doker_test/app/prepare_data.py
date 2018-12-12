@@ -59,10 +59,8 @@ for lens in END_LEN:
 	pickle.dump(Y, pickle_out)
 	pickle_out.close()
 
-#pickle_in = open("x-8.pickle", "rb")
-#x = pickle.load(pickle_in)
+#x = pickle.load(open("x-8.pickle", "rb"))
 #print(x)
 
-#pickle_in = open("y-8.pickle", "rb")
-#y = pickle.load(pickle_in)
+#y = pickle.load(open("y-8.pickle", "rb"))
 #print(y)
