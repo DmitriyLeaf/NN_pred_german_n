@@ -7,7 +7,7 @@ import pickle
 MAX_LEN_CODE = 123.0
 END_LEN = [8, 10, 15, 20]
 F_NAME = "data_sets/dict.cc_nouns_with_gender.txt"
-NUM_DATA = 10
+#NUM_DATA = 10
 
 def readFileRec(file_name, len_str):
 	training_data_file = open(file_name, 'r')
@@ -17,7 +17,7 @@ def readFileRec(file_name, len_str):
 	training_data_list = training_data_list[1:]
 	print(training_data_list[:10])
 	np.random.shuffle(training_data_list)
-	training_data_list = training_data_list[:NUM_DATA]
+	training_data_list = training_data_list
 	print(training_data_list[:10])
 
 	f_inputs = [[[0] for i in range(0, len_str)]]
