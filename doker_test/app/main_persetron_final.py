@@ -39,6 +39,8 @@ model.compile(optimizer="adam",
 
 model.fit(X[1000:], Y[1000:], epochs=1000, validation_split=0.25, callbacks=[tensorboard])
 
+model.save('german_noun_8dense.model')
+
 prediction = model.predict_classes(X[:1000])
 np.set_printoptions(threshold=np.nan)
 answer = [list(i).index(1) for i in Y[:1000]]
